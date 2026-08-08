@@ -15,8 +15,6 @@ export type Product = {
   featured?: boolean;
 };
 
-const hijabImage = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1000&q=85`;
-
 export const products: Product[] = [
   {
     id: "bridal-aurora",
@@ -108,7 +106,7 @@ export const products: Product[] = [
     collection: "hijab",
     subtitle: "Everyday modal scarf",
     description: "A breathable modal scarf with a brushed hand-feel and relaxed drape for effortless everyday styling.",
-    images: [hijabImage("photo-1584184924103-e310d9dc82fc"), hijabImage("photo-1596755389378-c31d21fd1273")],
+    images: ["/images/hijab/soft-taupe-modal.jpg"],
     material: "Modal",
     colors: ["Soft taupe", "Mushroom"],
     sizes: ["180 x 70 cm"],
@@ -122,7 +120,7 @@ export const products: Product[] = [
     collection: "hijab",
     subtitle: "Lightweight chiffon scarf",
     description: "A softly translucent chiffon with a refined finish, made for elegant layering and occasion dressing.",
-    images: [hijabImage("photo-1544005313-94ddf0286df2"), hijabImage("photo-1534528741775-53994a69daeb")],
+    images: ["/images/hijab/ivory-chiffon.jpg"],
     material: "Premium chiffon",
     colors: ["Ivory", "Cream"],
     sizes: ["180 x 70 cm"],
@@ -136,7 +134,7 @@ export const products: Product[] = [
     collection: "hijab",
     subtitle: "Soft stretch jersey",
     description: "A softly structured jersey that stays in place while retaining a polished, fluid silhouette.",
-    images: [hijabImage("photo-1524504388940-b1c1722653e1"), hijabImage("photo-1525507119028-ed4c629a60a3")],
+    images: ["/images/hijab/midnight-jersey.jpg"],
     material: "Viscose jersey",
     colors: ["Midnight", "Charcoal"],
     sizes: ["180 x 75 cm"]
@@ -149,7 +147,7 @@ export const products: Product[] = [
     collection: "hijab",
     subtitle: "Silk-blend bridal wrap",
     description: "A luminous silk-blend wrap with a calm, graceful drape for bridal looks and special occasions.",
-    images: [hijabImage("photo-1515886657613-9f3515b0c78f"), hijabImage("photo-1506629905607-d9e2f1fd7c5d")],
+    images: ["/images/hijab/pearl-bridal-hijab.jpg"],
     material: "Silk blend",
     colors: ["Pearl", "Champagne"],
     sizes: ["200 x 75 cm"],
@@ -163,7 +161,7 @@ export const products: Product[] = [
     collection: "hijab",
     subtitle: "Warm neutral modal",
     description: "A warm, versatile neutral designed to bring softness and ease to a considered wardrobe.",
-    images: [hijabImage("photo-1485968579580-b6d095142e6e"), hijabImage("photo-1483985988355-763728e1935b")],
+    images: ["/images/hijab/sand-modal.jpg"],
     material: "Modal",
     colors: ["Sand", "Warm beige"],
     sizes: ["180 x 70 cm"]
@@ -176,7 +174,7 @@ export const products: Product[] = [
     collection: "hijab",
     subtitle: "Muted rose chiffon",
     description: "A muted rosewood tone in an airy chiffon, adding quiet depth to day-to-evening dressing.",
-    images: [hijabImage("photo-1488426862026-3ee34a7d66df"), hijabImage("photo-1485230895905-ec40ba36b9bc")],
+    images: ["/images/hijab/rosewood-chiffon.jpg"],
     material: "Premium chiffon",
     colors: ["Rosewood", "Dusty rose"],
     sizes: ["180 x 70 cm"]
@@ -189,7 +187,7 @@ export const products: Product[] = [
     collection: "hijab",
     subtitle: "Everyday jersey wrap",
     description: "A smooth, softly weighted jersey wrap that makes everyday elegance feel effortless.",
-    images: [hijabImage("photo-1529139574466-a303027c1d8b"), hijabImage("photo-1515886657613-9f3515b0c78f")],
+    images: ["/images/hijab/stone-jersey.jpg"],
     material: "Viscose jersey",
     colors: ["Stone", "Warm grey"],
     sizes: ["180 x 75 cm"]
@@ -202,7 +200,7 @@ export const products: Product[] = [
     collection: "hijab",
     subtitle: "Evening chiffon scarf",
     description: "A cool, luminous chiffon with subtle movement for evening looks and intimate celebrations.",
-    images: [hijabImage("photo-1485230895905-ec40ba36b9bc"), hijabImage("photo-1509941943102-10c232535736")],
+    images: ["/images/hijab/moonlight-chiffon.jpg"],
     material: "Premium chiffon",
     colors: ["Moonlight", "Silver taupe"],
     sizes: ["180 x 70 cm"]
