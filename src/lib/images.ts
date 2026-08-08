@@ -1,6 +1,6 @@
 export const editorialImages = {
   hero: "/images/hero/home-hero.jpg",
-  dualBridal: "https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&w=1400&q=85",
+  dualBridal: "/images/bridal/serena-front.jpg",
   dualHijab: "https://images.unsplash.com/photo-1584184924103-e310d9dc82fc?auto=format&fit=crop&w=1400&q=85",
   about: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=85",
   lookbook: [

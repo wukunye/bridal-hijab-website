@@ -15,7 +15,6 @@ export type Product = {
   featured?: boolean;
 };
 
-const bridalImage = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=85`;
 const hijabImage = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1000&q=85`;
 
 export const products: Product[] = [
@@ -27,7 +26,7 @@ export const products: Product[] = [
     collection: "bridal",
     subtitle: "A-line lace gown",
     description: "A light-catching silhouette with a softly sculpted bodice and hand-finished lace that moves with quiet grace.",
-    images: [bridalImage("photo-1519741497674-611481863552"), bridalImage("photo-1520854221256-17451cc331bf")],
+    images: ["/images/bridal/aurora-front.jpg"],
     material: "Silk satin, French lace",
     colors: ["Ivory", "Pearl"],
     sizes: ["XXS", "XS", "S", "M", "L", "XL"],
@@ -39,11 +38,11 @@ export const products: Product[] = [
     name: "Celeste",
     category: "Wedding Dress",
     collection: "bridal",
-    subtitle: "Column silk gown",
-    description: "A fluid column gown with a luminous finish, designed for the woman who prefers modern simplicity.",
-    images: [bridalImage("photo-1544078751-58fee2d8a03b"), bridalImage("photo-1511285560929-80b456fea0bc")],
-    material: "Silk crepe, pearl buttons",
-    colors: ["Natural white", "Champagne"],
+    subtitle: "Beaded gown with overskirt",
+    description: "A sculpted, hand-beaded silhouette framed by a sweeping satin overskirt for a refined, dramatic entrance.",
+    images: ["/images/bridal/celeste-front.jpg"],
+    material: "Beaded tulle, duchess satin",
+    colors: ["Ivory", "Soft white"],
     sizes: ["XXS", "XS", "S", "M", "L", "XL"],
     featured: true
   },
@@ -55,7 +54,7 @@ export const products: Product[] = [
     collection: "bridal",
     subtitle: "Soft tulle ball gown",
     description: "Layers of airy tulle frame a clean neckline and a gently romantic volume for an unforgettable entrance.",
-    images: [bridalImage("photo-1519225421980-715cb0215aed"), bridalImage("photo-1537633552985-df8429e8048b")],
+    images: ["/images/bridal/serena-front.jpg", "/images/bridal/serena-back.jpg"],
     material: "Italian tulle, silk organza",
     colors: ["Ivory", "Warm white"],
     sizes: ["XXS", "XS", "S", "M", "L", "XL"],
@@ -69,7 +68,7 @@ export const products: Product[] = [
     collection: "bridal",
     subtitle: "Cathedral silk veil",
     description: "A sweeping cathedral veil finished with a whisper of embroidered edge for a poised, ethereal finish.",
-    images: [bridalImage("photo-1529634597503-139d3726fed5"), bridalImage("photo-1511285560929-80b456fea0bc")],
+    images: ["/images/bridal/elise-veil.jpg"],
     material: "Silk tulle, tonal embroidery",
     colors: ["Ivory", "Pearl"],
     sizes: ["2.5 m", "3 m"],
@@ -81,11 +80,11 @@ export const products: Product[] = [
     name: "Luna",
     category: "Evening Dress",
     collection: "bridal",
-    subtitle: "Bias-cut satin dress",
-    description: "A bias-cut satin dress with an elegant drape, made for celebrations long after the ceremony.",
-    images: [bridalImage("photo-1515372039744-b8f02a3ae446"), bridalImage("photo-1529139574466-a303027c1d8b")],
-    material: "Duchess satin",
-    colors: ["Ivory", "Oyster"],
+    subtitle: "Embellished evening gown",
+    description: "A deep plum evening gown with a luminous beaded bodice and fluid full skirt, designed for elegant celebrations.",
+    images: ["/images/bridal/luna-evening.jpg"],
+    material: "Embellished satin, crystal beading",
+    colors: ["Deep plum", "Amethyst"],
     sizes: ["XXS", "XS", "S", "M", "L", "XL"]
   },
   {
@@ -96,7 +95,7 @@ export const products: Product[] = [
     collection: "bridal",
     subtitle: "Fingertip lace veil",
     description: "A delicate fingertip veil with hand-placed floral lace that catches the light in every photograph.",
-    images: [bridalImage("photo-1492562080023-ab3db95bfbce"), bridalImage("photo-1519741497674-611481863552")],
+    images: ["/images/bridal/amelie-veil.jpg"],
     material: "French lace, soft tulle",
     colors: ["Ivory", "Soft white"],
     sizes: ["1.2 m", "1.5 m"]
