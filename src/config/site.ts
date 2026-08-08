@@ -10,7 +10,7 @@ export const siteConfig = {
   instagram: "https://instagram.com/",
   facebook: "https://facebook.com/",
   pinterest: "https://pinterest.com/",
-  url: "https://yourbrand.com"
+  url: "https://luveilahijab.com"
 } as const;
 
 export const navItems = [
