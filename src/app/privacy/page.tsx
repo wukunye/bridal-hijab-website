@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+export const metadata: Metadata = { title: "Privacy" };
+export default function PrivacyPage() { return <div className="shell legal-copy"><div className="page-intro"><p className="eyebrow">Legal</p><h1>Privacy policy</h1><p>TODO: Legal review before production use.</p></div><h2>Information we collect</h2><p>When you contact us, we may collect the details you provide, including your name, email address, country, WhatsApp number and message. We use this information only to respond to your inquiry and provide requested information.</p><h2>How we use your information</h2><p>We use inquiry details to communicate with you, answer questions and improve our service. We do not sell your personal information.</p><h2>Contact</h2><p>For privacy questions, please contact {siteConfig.email}.</p></div>; }

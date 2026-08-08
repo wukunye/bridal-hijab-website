@@ -1,0 +1,10 @@
+import type { Metadata } from "next";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ProductGrid } from "@/components/product/ProductGrid";
+import { getCollectionProducts } from "@/data/products";
+
+export const metadata: Metadata = { title: "Hijab", description: "Contemporary scarves designed for effortless elegance and everyday comfort." };
+
+export default function HijabPage() {
+  return <div className="shell"><div className="page-intro"><p className="eyebrow">The collection</p><h1>Hijab</h1><p>Contemporary scarves designed for effortless elegance and everyday comfort.</p></div><section className="pb-32"><SectionHeading eyebrow="Selected pieces" title="Soft structure, considered colour." /><ProductGrid products={getCollectionProducts("hijab")} filters={["ALL", "MODAL", "CHIFFON", "JERSEY", "BRIDAL"]} /></section></div>;
+}
