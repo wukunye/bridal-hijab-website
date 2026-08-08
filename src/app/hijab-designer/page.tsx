@@ -87,7 +87,7 @@ export default function HijabDesignerPage() {
 
       <section className="app-footer-note">
         <div className="shell">
-          <p>Luverila Hijab Designer is developed and operated by {siteConfig.legalName}.</p>
+          <p>Luverila Hijab Designer is developed and operated by {siteConfig.legalName}</p>
           <p>For support, please visit our <Link href="/contact">App Support</Link> page <ArrowUpRight size={14} aria-hidden="true" />.</p>
         </div>
       </section>
