@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "weinuokela",
+  name: "WEINUOKELA",
   legalName: "Guangzhou Kela Fashion Design Co., Ltd.",
   description: "Timeless bridal and modest fashion for modern women.",
   email: "sale@idolweddingdressfactory.com",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { navItems, siteConfig } from "@/config/site";
 
@@ -7,7 +8,9 @@ export function Footer() {
     <footer className="site-footer">
       <div className="shell footer-grid">
         <div>
-          <Link className="wordmark footer-wordmark" href="/">{siteConfig.name}</Link>
+          <Link className="wordmark footer-wordmark" href="/" aria-label={`${siteConfig.name} home`}>
+            <Image src="/images/brand/logo-wordmark.png" alt={siteConfig.name} width={700} height={109} />
+          </Link>
           <p className="footer-note">Bridal and modest fashion for modern women.</p>
         </div>
         <div className="footer-links">

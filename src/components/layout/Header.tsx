@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { navItems, siteConfig } from "@/config/site";
@@ -12,7 +13,7 @@ export function Header() {
     <header className="site-header">
       <div className="shell header-inner">
         <Link className="wordmark" href="/" onClick={() => setOpen(false)} aria-label={`${siteConfig.name} home`}>
-          {siteConfig.name}
+          <Image src="/images/brand/logo-wordmark.png" alt={siteConfig.name} width={700} height={109} priority />
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navItems.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
