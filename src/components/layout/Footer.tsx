@@ -17,6 +17,7 @@ export function Footer() {
           <p className="eyebrow">Explore</p>
           {navItems.slice(1).map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
           <Link href="/hijab-designer">Hijab Designer</Link>
+          <Link href="/app-support">App Support</Link>
         </div>
         <div className="footer-links">
           <p className="eyebrow">Follow</p>
