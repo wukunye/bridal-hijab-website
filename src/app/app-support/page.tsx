@@ -98,7 +98,7 @@ export default function AppSupportPage() {
       <section aria-labelledby="company-information">
         <h2 id="company-information">Company Information</h2>
         <p>Luverila Hijab Designer is operated by:</p>
-        <p><strong>{siteConfig.legalName}</strong><br /><strong>{siteConfig.address}</strong><br /><strong>China</strong></p>
+        <p><strong>{siteConfig.legalName}</strong><br /><strong>{siteConfig.address.replace(/, China$/, "")}</strong><br /><strong>China</strong></p>
         <p className="support-updated">Last updated: August 8, 2026</p>
       </section>
     </div>
