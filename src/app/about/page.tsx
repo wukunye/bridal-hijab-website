@@ -18,7 +18,7 @@ export default function AboutPage() {
     </div>
 
     <section className="about-split pb-32">
-      <div className="about-image"><Image src={editorialImages.about} alt="Editorial portrait from the collection" fill sizes="(max-width: 680px) 100vw, 50vw" className="object-cover" /></div>
+      <div className="about-image"><Image src={editorialImages.about} alt="Bride wearing a white bridal gown in an elegant interior" fill sizes="(max-width: 680px) 100vw, 50vw" className="object-cover" /></div>
       <div className="about-copy">
         <p className="eyebrow">Who we are</p>
         <h2>Design with purpose.</h2>
