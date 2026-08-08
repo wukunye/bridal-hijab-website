@@ -11,7 +11,7 @@ export default function HomePage() {
   const hijab = getCollectionProducts("hijab").slice(0, 4);
   return <>
     <section className="hero">
-      <div className="hero-media"><Image src={editorialImages.hero} alt="Editorial bridal fashion portrait" fill priority sizes="100vw" className="object-cover" /></div>
+      <div className="hero-media"><Image src={editorialImages.hero} alt="Bride wearing an embellished modest wedding gown and hijab" fill priority sizes="100vw" className="hero-image" /></div>
       <div className="hero-copy"><p className="hero-kicker">Bridal · Modest · Timeless</p><h1>Elegance Without Boundaries</h1><p className="hero-subtitle">Timeless bridal and modest fashion for modern women.</p><div className="hero-actions"><Link className="button button-light" href="/bridal">Explore bridal</Link><Link className="button button-light" href="/hijab">Explore hijabs</Link></div></div>
       <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-white"><ArrowDownRight size={22} strokeWidth={1} /></div>
     </section>
