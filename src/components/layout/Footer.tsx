@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 import { navItems, siteConfig } from "@/config/site";
 
 export function Footer() {
@@ -16,20 +15,18 @@ export function Footer() {
         <div className="footer-links">
           <p className="eyebrow">Explore</p>
           {navItems.slice(1).map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+        </div>
+        <div className="footer-links">
+          <p className="eyebrow">Luverila App</p>
           <Link href="/hijab-designer">Hijab Designer</Link>
           <Link href="/app-support">App Support</Link>
+          <Link href="/app-privacy">App Privacy</Link>
           <Link href="/app-terms">App Terms</Link>
         </div>
         <div className="footer-links">
-          <p className="eyebrow">Follow</p>
-          <a href={siteConfig.instagram} target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={13} /></a>
-          <a href={siteConfig.facebook} target="_blank" rel="noreferrer">Facebook <ArrowUpRight size={13} /></a>
-          <a href={siteConfig.pinterest} target="_blank" rel="noreferrer">Pinterest <ArrowUpRight size={13} /></a>
-        </div>
-        <div className="footer-links">
-          <p className="eyebrow">Legal</p>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/terms">Terms</Link>
+          <p className="eyebrow">Website Legal</p>
+          <Link href="/privacy">Website Privacy</Link>
+          <Link href="/terms">Website Terms</Link>
           <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
         </div>
       </div>

@@ -11,8 +11,8 @@ export default function PrivacyPage() {
 
   return <div className="shell legal-copy">
     <div className="page-intro">
-      <p className="eyebrow">Legal</p>
-      <h1>Privacy policy</h1>
+      <p className="eyebrow">Website Legal</p>
+      <h1>Website Privacy Policy</h1>
       <p>Effective date: {effectiveDate}</p>
     </div>
 

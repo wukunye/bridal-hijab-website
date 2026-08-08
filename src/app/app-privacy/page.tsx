@@ -14,7 +14,7 @@ export default function AppPrivacyPage() {
   return (
     <div className="shell legal-copy app-support">
       <div className="page-intro">
-        <p className="eyebrow">Luverila Hijab Designer</p>
+        <p className="eyebrow">App Legal | Luverila Hijab Designer</p>
         <h1>App Privacy Policy</h1>
         <p>Effective date: August 8, 2026<br />Last updated: August 8, 2026</p>
       </div>
