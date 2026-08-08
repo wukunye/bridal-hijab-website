@@ -1,6 +1,6 @@
 # Bridal + Hijab 国际品牌官网
 
-这是一个基于 Next.js、TypeScript 和 Tailwind CSS 的品牌展示型官网，面向海外客户展示 Bridal、Hijab、Modest Fashion、Lookbook 和公司信息。第一版不包含购物车、支付、登录、订单或复杂后台。
+这是一个基于 Next.js、TypeScript 和 Tailwind CSS 的品牌展示型官网，面向海外客户展示 Bridal、Hijab、Modest Fashion 和公司信息。第一版不包含购物车、支付、登录、订单或复杂后台。
 
 ## 如何运行网站
 
@@ -27,7 +27,7 @@ npm run dev
 
 ## 替换图片
 
-目前产品图片和 editorial 图片使用 Unsplash 占位图片。产品图片路径集中在 `src/data/products.ts`，首页和 Lookbook 图片集中在 `src/lib/images.ts`。
+目前产品图片和 editorial 图片使用 Unsplash 占位图片。产品图片路径集中在 `src/data/products.ts`，首页图片集中在 `src/lib/images.ts`。
 
 建议后续把真实图片放入以下目录，并将对应 URL 改为本地路径：
 
@@ -36,7 +36,6 @@ public/images/hero/
 public/images/bridal/
 public/images/hijab/
 public/images/about/
-public/images/lookbook/
 ```
 
 Hero 图片在 `src/lib/images.ts` 的 `editorialImages.hero`。Bridal 和 Hijab 产品图片在 `src/data/products.ts` 每个产品的 `images` 数组中。

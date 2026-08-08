@@ -18,6 +18,5 @@ export const navItems = [
   { href: "/bridal", label: "Bridal" },
   { href: "/hijab", label: "Hijab" },
   { href: "/about", label: "About" },
-  { href: "/lookbook", label: "Lookbook" },
   { href: "/contact", label: "Contact" }
 ] as const;
