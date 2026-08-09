@@ -1,0 +1,80 @@
+"use client";
+
+import type { Language } from "./LanguageProvider";
+import { useLanguage } from "./LanguageProvider";
+
+const copy = {
+  homeKicker: { en: "Bridal · Modest · Timeless", zh: "婚纱 · 端庄时尚 · 永恒", es: "Novias · Modestia · Atemporal", ar: "زفاف · احتشام · أناقة خالدة" },
+  homeTitle: { en: "Elegance Without Boundaries", zh: "优雅，无界", es: "Elegancia sin límites", ar: "أناقة بلا حدود" },
+  homeSubtitle: { en: "Timeless bridal and modest fashion for modern women.", zh: "为现代女性打造永恒的婚纱与端庄时尚。", es: "Moda nupcial y modesta atemporal para la mujer moderna.", ar: "أزياء زفاف محتشمة وخالدة للمرأة العصرية." },
+  exploreBridal: { en: "Explore bridal", zh: "探索婚纱", es: "Explorar novias", ar: "اكتشفي فساتين الزفاف" },
+  exploreHijabs: { en: "Explore hijabs", zh: "探索头巾", es: "Explorar hiyabs", ar: "اكتشفي الحجاب" },
+  wardrobeEyebrow: { en: "A considered wardrobe", zh: "精心设计的衣橱", es: "Un guardarropa cuidado", ar: "خزانة مدروسة" },
+  wardrobeTitle: { en: "Two worlds. One language of elegance.", zh: "两个世界，一种优雅语言。", es: "Dos mundos. Un lenguaje de elegancia.", ar: "عالمان، ولغة واحدة من الأناقة." },
+  timelessSilhouettes: { en: "Timeless silhouettes.", zh: "永恒廓形。", es: "Siluetas atemporales.", ar: "قصّات خالدة." },
+  bridalPanel: { en: "Created for unforgettable moments, with a quiet point of view.", zh: "为难忘时刻而生，呈现内敛而坚定的审美。", es: "Creado para momentos inolvidables, con una visión serena.", ar: "صُممت للحظات لا تُنسى برؤية هادئة وراقية." },
+  everydayGrace: { en: "Everyday grace.", zh: "日常优雅。", es: "Elegancia cotidiana.", ar: "أناقة يومية." },
+  hijabPanel: { en: "Modern hijabs designed with elegance and comfort in mind.", zh: "兼顾优雅与舒适的现代头巾设计。", es: "Hiyabs modernos diseñados pensando en la elegancia y la comodidad.", ar: "حجابات عصرية تجمع بين الأناقة والراحة." },
+  selectedPieces: { en: "Selected pieces", zh: "精选作品", es: "Piezas seleccionadas", ar: "قطع مختارة" },
+  bridalCollection: { en: "The bridal collection", zh: "婚纱系列", es: "La colección nupcial", ar: "مجموعة الزفاف" },
+  bridalCollectionIntro: { en: "Luminous fabrics, thoughtful details and silhouettes that stay with you.", zh: "闪耀面料、精致细节与令人难忘的廓形。", es: "Tejidos luminosos, detalles cuidados y siluetas inolvidables.", ar: "أقمشة مضيئة وتفاصيل مدروسة وقصّات تبقى في الذاكرة." },
+  viewAllBridal: { en: "View all bridal pieces", zh: "查看全部婚纱", es: "Ver todas las piezas nupciales", ar: "عرض جميع قطع الزفاف" },
+  modestCollection: { en: "The modest collection", zh: "端庄时尚系列", es: "La colección modesta", ar: "مجموعة الأزياء المحتشمة" },
+  softerStatement: { en: "A softer kind of statement", zh: "柔和而有力量的表达", es: "Una expresión más suave", ar: "تعبير أكثر نعومة" },
+  hijabCollectionIntro: { en: "Contemporary scarves in refined tones, made for effortless elegance and everyday comfort.", zh: "以精致色调打造现代头巾，兼具自然优雅与日常舒适。", es: "Pañuelos contemporáneos en tonos refinados para una elegancia natural y comodidad diaria.", ar: "أوشحة عصرية بألوان راقية لأناقة سهلة وراحة يومية." },
+  viewAllHijabs: { en: "View all hijabs", zh: "查看全部头巾", es: "Ver todos los hiyabs", ar: "عرض جميع الحجابات" },
+  aboutEyebrow: { en: "Our point of view", zh: "我们的理念", es: "Nuestro punto de vista", ar: "رؤيتنا" },
+  aboutCompany: { en: "About our company", zh: "关于公司", es: "Sobre nuestra empresa", ar: "عن شركتنا" },
+  aboutHome1: { en: "We are a fashion company dedicated to creating elegant bridal and modest fashion collections.", zh: "我们是一家专注于优雅婚纱与端庄时尚系列的服装企业。", es: "Somos una empresa de moda dedicada a crear elegantes colecciones nupciales y modestas.", ar: "نحن شركة أزياء متخصصة في ابتكار مجموعات زفاف وأزياء محتشمة أنيقة." },
+  aboutHome2: { en: "Our collection brings together timeless wedding dresses, refined bridal pieces and contemporary hijabs, with a focus on thoughtful design, beautiful materials and modern femininity.", zh: "我们的系列涵盖经典婚纱、精致新娘单品和现代头巾，注重设计、优质面料与现代女性气质。", es: "Nuestra colección reúne vestidos de novia atemporales, piezas refinadas e hiyabs contemporáneos, con atención al diseño, los materiales y la feminidad moderna.", ar: "تجمع مجموعاتنا بين فساتين الزفاف الخالدة والقطع الراقية والحجابات العصرية، مع التركيز على التصميم المدروس والخامات الجميلة والأنوثة الحديثة." },
+  aboutHome3: { en: "Through our work, we hope to create pieces that feel elegant, comfortable and meaningful for women around the world.", zh: "我们希望为世界各地的女性创造优雅、舒适且富有意义的作品。", es: "Esperamos crear piezas elegantes, cómodas y significativas para mujeres de todo el mundo.", ar: "نسعى إلى ابتكار قطع أنيقة ومريحة وذات معنى للنساء حول العالم." },
+  discoverStory: { en: "Discover our story", zh: "了解我们的故事", es: "Descubre nuestra historia", ar: "اكتشفي قصتنا" },
+  connectEyebrow: { en: "Let's connect", zh: "与我们联系", es: "Conectemos", ar: "لنتواصل" },
+  connectTitle: { en: "Discover our collections or get in touch with our team.", zh: "探索我们的系列，或与团队取得联系。", es: "Descubre nuestras colecciones o contacta con nuestro equipo.", ar: "اكتشفي مجموعاتنا أو تواصلي مع فريقنا." },
+  connectIntro: { en: "We welcome product inquiries, collaborations and thoughtful conversations.", zh: "欢迎产品咨询、合作洽谈与交流。", es: "Recibimos consultas de productos, colaboraciones y nuevas conversaciones.", ar: "نرحب باستفسارات المنتجات وفرص التعاون والحوار." },
+  contactUs: { en: "Contact us", zh: "联系我们", es: "Contáctanos", ar: "تواصلي معنا" },
+  collection: { en: "The collection", zh: "系列", es: "La colección", ar: "المجموعة" },
+  bridalIntro: { en: "Timeless silhouettes, delicate details and modern expressions of bridal elegance.", zh: "永恒廓形、细腻细节与现代新娘优雅。", es: "Siluetas atemporales, detalles delicados y expresiones modernas de elegancia nupcial.", ar: "قصّات خالدة وتفاصيل دقيقة وتعبير عصري عن أناقة العروس." },
+  bridalPageTitle: { en: "Made for the moments that matter.", zh: "为重要时刻而生。", es: "Hecho para los momentos importantes.", ar: "صُممت للحظات التي تهم." },
+  hijabIntro: { en: "Contemporary scarves designed for effortless elegance and everyday comfort.", zh: "为自然优雅与日常舒适而设计的现代头巾。", es: "Pañuelos contemporáneos diseñados para una elegancia natural y comodidad diaria.", ar: "أوشحة عصرية مصممة لأناقة سهلة وراحة يومية." },
+  hijabPageTitle: { en: "Soft structure, considered colour.", zh: "柔和结构，考究色彩。", es: "Estructura suave, color cuidado.", ar: "بنية ناعمة وألوان مدروسة." },
+  aboutUs: { en: "About us", zh: "关于我们", es: "Sobre nosotros", ar: "من نحن" },
+  aboutTitle: { en: "Design with Purpose. Crafted with Care.", zh: "用心设计，精心制作。", es: "Diseño con propósito. Confección con cuidado.", ar: "تصميم هادف وصناعة بعناية." },
+  aboutIntro: { en: "A trusted creative and manufacturing partner for thoughtful fashion brands and private clients.", zh: "为注重品质的时尚品牌和私人客户提供值得信赖的设计与生产服务。", es: "Un socio creativo y de fabricación de confianza para marcas y clientes privados.", ar: "شريك موثوق في التصميم والتصنيع للعلامات الراقية والعملاء الأفراد." },
+  whoWeAre: { en: "Who we are", zh: "我们是谁", es: "Quiénes somos", ar: "من نحن" },
+  designPurpose: { en: "Design with purpose.", zh: "有目的地设计。", es: "Diseño con propósito.", ar: "تصميم هادف." },
+  aboutBody1: { en: "We are a boutique fashion design and manufacturing company specializing in bridal gowns, Muslim dresses, evening gowns, hijabs, and veils.", zh: "我们是一家精品时装设计与制造公司，专注于婚纱、穆斯林礼服、晚礼服、头巾和面纱。", es: "Somos una empresa boutique de diseño y fabricación especializada en vestidos de novia, moda musulmana, vestidos de noche, hiyabs y velos.", ar: "نحن شركة متخصصة في تصميم وتصنيع فساتين الزفاف والملابس الإسلامية وفساتين السهرة والحجاب والطرحات." },
+  aboutBody2: { en: "With a strong passion for elegant design and fine craftsmanship, we work closely with a trusted family-run manufacturing partner with a team of 23 experienced and highly skilled artisans.", zh: "我们热爱优雅设计与精湛工艺，并与一家拥有 23 名经验丰富工匠的家族生产伙伴紧密合作。", es: "Con pasión por el diseño elegante y la artesanía, colaboramos con un fabricante familiar de 23 artesanos experimentados.", ar: "بشغف كبير للتصميم الأنيق والحرفية الدقيقة، نعمل مع شريك تصنيع عائلي يضم 23 حرفياً ماهراً وذا خبرة." },
+  aboutBody3: { en: "From design concept and fabric selection to pattern making, sampling, customization, and bulk production, we provide a complete design-to-production service under one roof.", zh: "从设计概念、面料选择到制版、打样、定制和批量生产，我们提供一站式设计生产服务。", es: "Desde el concepto y la selección de tejidos hasta patronaje, muestras, personalización y producción, ofrecemos un servicio integral.", ar: "من الفكرة واختيار القماش إلى إعداد الباترون والعينات والتخصيص والإنتاج، نقدم خدمة متكاملة تحت سقف واحد." },
+  ourApproach: { en: "Our approach", zh: "我们的方式", es: "Nuestro enfoque", ar: "نهجنا" },
+  yourVision: { en: "Built around your vision.", zh: "围绕你的愿景打造。", es: "Creado en torno a tu visión.", ar: "مصمم حول رؤيتك." },
+  approachBody1: { en: "Every brand and client is different. We offer flexible customization and personalized service to develop designs that reflect each vision, style, and market need.", zh: "每个品牌和客户都不同。我们提供灵活定制和个性化服务，打造符合愿景、风格和市场需求的设计。", es: "Cada marca y cliente es diferente. Ofrecemos personalización flexible para desarrollar diseños que reflejen cada visión y mercado.", ar: "لكل علامة وعميل احتياجات مختلفة، لذلك نقدم تخصيصاً مرناً وخدمة شخصية تعكس الرؤية والأسلوب واحتياجات السوق." },
+  approachBody2: { en: "Whether you are an established brand, a boutique, a designer, or a private client, we are committed to quality garments, careful craftsmanship, and reliable production.", zh: "无论你是成熟品牌、精品店、设计师或私人客户，我们都致力于提供高品质服装、精细工艺与可靠生产。", es: "Ya seas una marca, boutique, diseñador o cliente privado, ofrecemos prendas de calidad, artesanía cuidada y producción fiable.", ar: "سواء كنت علامة تجارية أو بوتيكاً أو مصمماً أو عميلاً فردياً، نلتزم بالجودة والحرفية والإنتاج الموثوق." },
+  startConversation: { en: "Start a conversation", zh: "开始沟通", es: "Iniciar una conversación", ar: "ابدأ المحادثة" },
+  ourStrength: { en: "Our strength", zh: "我们的优势", es: "Nuestra fortaleza", ar: "قوتنا" },
+  onePartner: { en: "One creative partner from the first idea to the finished garment.", zh: "从第一个想法到成衣，一个创意伙伴全程协作。", es: "Un socio creativo desde la primera idea hasta la prenda terminada.", ar: "شريك إبداعي واحد من الفكرة الأولى حتى القطعة النهائية." },
+  craftsmanship: { en: "Great fashion is not only beautiful design — it is the craftsmanship, details, and people behind every piece.", zh: "优秀时装不仅是美丽设计，更在于每件作品背后的工艺、细节和匠人。", es: "La gran moda no es solo diseño: es la artesanía, los detalles y las personas detrás de cada pieza.", ar: "الموضة الراقية ليست تصميماً جميلاً فقط، بل هي الحرفية والتفاصيل والأشخاص خلف كل قطعة." },
+  contactTitle: { en: "Let's get in touch.", zh: "让我们保持联系。", es: "Hablemos.", ar: "لنبقَ على تواصل." },
+  contactIntro: { en: "We'd love to hear from you. For product inquiries, collaborations or general questions, please contact us below.", zh: "期待收到你的消息。如有产品咨询、合作或其他问题，请通过以下方式联系我们。", es: "Nos encantará saber de ti. Para consultas, colaboraciones o preguntas generales, contáctanos.", ar: "يسعدنا التواصل معك. للاستفسار عن المنتجات أو التعاون أو الأسئلة العامة، تواصلي معنا أدناه." },
+  companyAddress: { en: "Company address", zh: "公司地址", es: "Dirección de la empresa", ar: "عنوان الشركة" },
+  contactDirect: { en: "Contact us directly", zh: "直接联系我们", es: "Contacto directo", ar: "تواصل مباشر" },
+  startTeam: { en: "Start a conversation with our team.", zh: "与我们的团队开始沟通。", es: "Inicia una conversación con nuestro equipo.", ar: "ابدئي محادثة مع فريقنا." },
+  chooseContact: { en: "Choose the contact method that works best for you. We will respond as soon as possible.", zh: "请选择最方便的联系方式，我们会尽快回复。", es: "Elige el método que prefieras. Responderemos lo antes posible.", ar: "اختاري وسيلة التواصل الأنسب وسنرد في أقرب وقت." },
+  interestedProduct: { en: "Interested product", zh: "感兴趣的产品", es: "Producto de interés", ar: "المنتج المطلوب" },
+  sendEmail: { en: "Send an email", zh: "发送邮件", es: "Enviar un correo", ar: "إرسال بريد إلكتروني" },
+  whatsappContact: { en: "Contact on WhatsApp", zh: "通过 WhatsApp 联系", es: "Contactar por WhatsApp", ar: "التواصل عبر واتساب" },
+  backTo: { en: "Back to", zh: "返回", es: "Volver a", ar: "العودة إلى" },
+  collectionLabel: { en: "Collection", zh: "系列", es: "Colección", ar: "المجموعة" },
+  categoryLabel: { en: "Category", zh: "分类", es: "Categoría", ar: "الفئة" },
+  materialLabel: { en: "Material", zh: "材质", es: "Material", ar: "الخامة" },
+  coloursLabel: { en: "Colours", zh: "颜色", es: "Colores", ar: "الألوان" },
+  sizesLabel: { en: "Sizes", zh: "尺码", es: "Tallas", ar: "المقاسات" },
+  sendInquiry: { en: "Send an inquiry", zh: "发送询盘", es: "Enviar una consulta", ar: "إرسال استفسار" }
+} satisfies Record<string, Record<Language, string>>;
+
+export type PageTextId = keyof typeof copy;
+
+export function PageText({ id }: { id: PageTextId }) {
+  const { language } = useLanguage();
+  return <>{copy[id][language]}</>;
+}
