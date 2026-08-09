@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/config/site";
+import { LanguageProvider } from "@/components/i18n/LanguageProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -12,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><Header /><main>{children}</main><Footer /></body></html>;
+  return <html lang="en"><body><LanguageProvider><Header /><main>{children}</main><Footer /></LanguageProvider></body></html>;
 }
