@@ -7,7 +7,7 @@ export function LanguageSwitcher() {
   return <label className="language-switcher">
     <span className="sr-only">{t("language")}</span>
     <select value={language} onChange={(event) => setLanguage(event.target.value as typeof language)} aria-label={t("language")}>
-      {languageOptions.map((option) => <option key={option.code} value={option.code}>{option.nativeLabel} · {option.label}</option>)}
+      {languageOptions.map((option) => <option key={option.code} value={option.code}>{option.nativeLabel}</option>)}
     </select>
   </label>;
 }

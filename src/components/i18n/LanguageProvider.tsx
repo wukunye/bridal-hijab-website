@@ -32,7 +32,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = language;
-    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+    document.documentElement.dir = "ltr";
+    document.documentElement.dataset.language = language;
     window.localStorage.setItem("luveila-language", language);
   }, [language]);
 
