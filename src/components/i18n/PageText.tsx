@@ -69,7 +69,10 @@ const copy = {
   materialLabel: { en: "Material", zh: "材质", es: "Material", ar: "الخامة" },
   coloursLabel: { en: "Colours", zh: "颜色", es: "Colores", ar: "الألوان" },
   sizesLabel: { en: "Sizes", zh: "尺码", es: "Tallas", ar: "المقاسات" },
-  sendInquiry: { en: "Send an inquiry", zh: "发送询盘", es: "Enviar una consulta", ar: "إرسال استفسار" }
+  sendInquiry: { en: "Send an inquiry", zh: "发送询盘", es: "Enviar una consulta", ar: "إرسال استفسار" },
+  bridalName: { en: "Bridal", zh: "婚纱", es: "Novias", ar: "فساتين الزفاف" },
+  hijabName: { en: "Hijab", zh: "头巾", es: "Hiyab", ar: "الحجاب" },
+  designDevelopmentProduction: { en: "Design + Development + Production", zh: "设计 + 开发 + 生产", es: "Diseno + Desarrollo + Produccion", ar: "التصميم + التطوير + الإنتاج" }
 } satisfies Record<string, Record<Language, string>>;
 
 export type PageTextId = keyof typeof copy;

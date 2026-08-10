@@ -3,10 +3,12 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { siteConfig } from "@/config/site";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
 export function InquiryForm({ productName = "" }: { productName?: string }) {
+  const { t } = useLanguage();
   const [status, setStatus] = useState<FormState>("idle");
   const [message, setMessage] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(productName);
@@ -20,30 +22,30 @@ export function InquiryForm({ productName = "" }: { productName?: string }) {
     try {
       const response = await fetch("/api/inquiry", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
       const result = await response.json() as { message?: string };
-      if (!response.ok) throw new Error(result.message || "Unable to send your inquiry.");
+      if (!response.ok) throw new Error(result.message || t("inquiryError"));
       setStatus("success");
-      setMessage("Thank you. Your inquiry has been sent and our team will be in touch shortly.");
+      setMessage(t("inquirySuccess"));
       form.reset();
       setSelectedProduct("");
     } catch (error) {
       setStatus("error");
-      setMessage(error instanceof Error ? error.message : "Unable to send your inquiry. Please email us directly.");
+      setMessage(error instanceof Error ? error.message : t("inquiryError"));
     }
   }
 
   return <form className="inquiry-form" onSubmit={handleSubmit} noValidate>
     <div className="form-grid">
-      <label>Full Name *<input name="fullName" required autoComplete="name" /></label>
-      <label>Company / Organization<input name="company" autoComplete="organization" /></label>
-      <label>Country *<input name="country" required autoComplete="country-name" /></label>
-      <label>Email *<input name="email" type="email" required autoComplete="email" /></label>
-      <label>WhatsApp<input name="whatsapp" autoComplete="tel" /></label>
-      <label>Interested Product<input name="product" value={selectedProduct} onChange={(event) => setSelectedProduct(event.target.value)} /></label>
+      <label>{t("fullName")} *<input name="fullName" required autoComplete="name" /></label>
+      <label>{t("company")}<input name="company" autoComplete="organization" /></label>
+      <label>{t("country")} *<input name="country" required autoComplete="country-name" /></label>
+      <label>{t("email")} *<input name="email" type="email" required autoComplete="email" /></label>
+      <label>{t("whatsapp")}<input name="whatsapp" autoComplete="tel" /></label>
+      <label>{t("interestedProduct")}<input name="product" value={selectedProduct} onChange={(event) => setSelectedProduct(event.target.value)} /></label>
     </div>
-    <label>Message *<textarea name="message" required rows={6} placeholder="Tell us how we can help." /></label>
+    <label>{t("message")} *<textarea name="message" required rows={6} placeholder={t("messagePlaceholder")} /></label>
     <input type="text" name="botcheck" className="hidden-field" tabIndex={-1} autoComplete="off" />
-    <button className="button button-dark" type="submit" disabled={status === "loading"}>{status === "loading" ? "Sending..." : "Send inquiry"}</button>
+    <button className="button button-dark" type="submit" disabled={status === "loading"}>{status === "loading" ? t("sending") : t("sendInquiry")}</button>
     {status === "success" && <p className="form-message success" role="status">{message}</p>}
-    {status === "error" && <p className="form-message error" role="alert">{message} <a href={`mailto:${siteConfig.email}`}>Email us directly.</a></p>}
+    {status === "error" && <p className="form-message error" role="alert">{message} <a href={`mailto:${siteConfig.email}`}>{t("emailDirectly")}</a></p>}
   </form>;
 }

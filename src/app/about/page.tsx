@@ -45,7 +45,7 @@ export default function AboutPage() {
     <section className="section">
       <div className="shell about-copy max-w-3xl">
         <p className="eyebrow"><PageText id="ourStrength" /></p>
-        <h2>Design + Development + Production</h2>
+        <h2><PageText id="designDevelopmentProduction" /></h2>
         <p className="text-lg"><PageText id="onePartner" /></p>
         <p><PageText id="craftsmanship" /></p>
       </div>

@@ -15,7 +15,7 @@ export function Footer() {
           <Link className="wordmark footer-wordmark" href="/" aria-label={`${siteConfig.name} home`}>
             <Image src="/images/brand/logo-wordmark.png" alt={siteConfig.name} width={700} height={109} />
           </Link>
-          <p className="footer-note">Bridal and modest fashion for modern women.</p>
+          <p className="footer-note">{t("footerNote")}</p>
         </div>
         <div className="footer-links">
           <p className="eyebrow">{t("explore")}</p>
@@ -35,7 +35,7 @@ export function Footer() {
           <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
         </div>
       </div>
-      <div className="shell footer-bottom"><span>© {new Date().getFullYear()} {siteConfig.legalName}</span><span>Designed for a timeless point of view.</span></div>
+      <div className="shell footer-bottom"><span>© {new Date().getFullYear()} {siteConfig.legalName}</span><span>{t("footerTagline")}</span></div>
     </footer>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { LegalLanguageNotice } from "@/components/app/LegalLanguageNotice";
 
 export const metadata: Metadata = {
   title: "Luverila Hijab Designer Terms of Use",
@@ -17,6 +18,7 @@ export default function AppTermsPage() {
         <h1>Terms of Use</h1>
         <p>Effective date: August 8, 2026<br />Last updated: August 8, 2026</p>
       </div>
+      <LegalLanguageNotice />
 
       <p>These Terms of Use (&quot;Terms&quot;) govern your use of the Luverila Hijab Designer application (the &quot;App&quot;), operated by <strong>{siteConfig.legalName}</strong> (&quot;Luverila,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By downloading, accessing, or using the App, you agree to these Terms.</p>
       <p>If you do not agree, do not use the App.</p>

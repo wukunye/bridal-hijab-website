@@ -7,5 +7,5 @@ import { PageText } from "@/components/i18n/PageText";
 export const metadata: Metadata = { title: "Bridal", description: "Timeless silhouettes, delicate details and modern expressions of bridal elegance." };
 
 export default function BridalPage() {
-  return <div className="shell"><div className="page-intro"><p className="eyebrow"><PageText id="collection" /></p><h1>Bridal</h1><p><PageText id="bridalIntro" /></p></div><section className="pb-32"><SectionHeading eyebrow={<PageText id="selectedPieces" />} title={<PageText id="bridalPageTitle" />} /><ProductGrid products={getCollectionProducts("bridal")} filters={["ALL", "WEDDING DRESSES", "VEILS", "EVENING"]} /></section></div>;
+  return <div className="shell"><div className="page-intro"><p className="eyebrow"><PageText id="collection" /></p><h1><PageText id="bridalName" /></h1><p><PageText id="bridalIntro" /></p></div><section className="pb-32"><SectionHeading eyebrow={<PageText id="selectedPieces" />} title={<PageText id="bridalPageTitle" />} /><ProductGrid products={getCollectionProducts("bridal")} filters={["ALL", "WEDDING DRESSES", "VEILS", "EVENING"]} /></section></div>;
 }
