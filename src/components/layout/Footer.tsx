@@ -23,10 +23,10 @@ export function Footer() {
         </div>
         <div className="footer-links">
           <p className="eyebrow footer-app-heading"><span>{t("app")}</span><span className="coming-soon">{t("comingSoon")}</span></p>
-          <Link href="/hijab-designer">Hijab Designer</Link>
-          <Link href="/app-support">App Support</Link>
-          <Link href="/app-privacy">App Privacy</Link>
-          <Link href="/app-terms">App Terms</Link>
+          <Link href="/hijab-designer">{t("hijabDesigner")}</Link>
+          <Link href="/app-support">{t("appSupport")}</Link>
+          <Link href="/app-privacy">{t("appPrivacy")}</Link>
+          <Link href="/app-terms">{t("appTerms")}</Link>
         </div>
         <div className="footer-links">
           <p className="eyebrow">{t("legal")}</p>

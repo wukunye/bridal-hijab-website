@@ -12,10 +12,10 @@ export const languageOptions: Array<{ code: Language; label: string; nativeLabel
 ];
 
 const translations = {
-  en: { home: "Home", bridal: "Bridal", hijab: "Hijab", about: "About", contact: "Contact", explore: "Explore", app: "Luverila App", comingSoon: "Coming soon", legal: "Website Legal", privacy: "Website Privacy", terms: "Website Terms", language: "Language" },
-  zh: { home: "首页", bridal: "婚纱", hijab: "头巾", about: "关于我们", contact: "联系我们", explore: "浏览", app: "Luverila 应用", comingSoon: "即将上线", legal: "网站法律信息", privacy: "网站隐私政策", terms: "网站条款", language: "语言" },
-  es: { home: "Inicio", bridal: "Novias", hijab: "Hiyab", about: "Nosotros", contact: "Contacto", explore: "Explorar", app: "App Luverila", comingSoon: "Próximamente", legal: "Información legal", privacy: "Privacidad web", terms: "Términos web", language: "Idioma" },
-  ar: { home: "الرئيسية", bridal: "فساتين الزفاف", hijab: "الحجاب", about: "من نحن", contact: "اتصل بنا", explore: "استكشف", app: "تطبيق Luverila", comingSoon: "قريباً", legal: "قانوني للموقع", privacy: "خصوصية الموقع", terms: "شروط الموقع", language: "اللغة" }
+  en: { home: "Home", bridal: "Bridal", hijab: "Hijab", about: "About", contact: "Contact", explore: "Explore", app: "Luverila App", hijabDesigner: "Hijab Designer", appSupport: "App Support", appPrivacy: "App Privacy", appTerms: "App Terms", comingSoon: "Coming soon", legal: "Website Legal", privacy: "Website Privacy", terms: "Website Terms", language: "Language" },
+  zh: { home: "首页", bridal: "婚纱", hijab: "头巾", about: "关于我们", contact: "联系我们", explore: "浏览", app: "Luverila 应用", hijabDesigner: "头巾设计器", appSupport: "应用支持", appPrivacy: "应用隐私政策", appTerms: "应用条款", comingSoon: "即将上线", legal: "网站法律信息", privacy: "网站隐私政策", terms: "网站条款", language: "语言" },
+  es: { home: "Inicio", bridal: "Novias", hijab: "Hiyab", about: "Nosotros", contact: "Contacto", explore: "Explorar", app: "App Luverila", hijabDesigner: "Diseñador de hiyabs", appSupport: "Soporte de la app", appPrivacy: "Privacidad de la app", appTerms: "Términos de la app", comingSoon: "Próximamente", legal: "Información legal", privacy: "Privacidad web", terms: "Términos web", language: "Idioma" },
+  ar: { home: "الرئيسية", bridal: "فساتين الزفاف", hijab: "الحجاب", about: "من نحن", contact: "اتصل بنا", explore: "استكشف", app: "تطبيق Luverila", hijabDesigner: "مصمم الحجاب", appSupport: "دعم التطبيق", appPrivacy: "خصوصية التطبيق", appTerms: "شروط التطبيق", comingSoon: "قريباً", legal: "قانوني للموقع", privacy: "خصوصية الموقع", terms: "شروط الموقع", language: "اللغة" }
 } as const;
 
 type TranslationKey = keyof typeof translations.en;
