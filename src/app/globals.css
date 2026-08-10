@@ -125,6 +125,8 @@ img { display:block; }
 .footer-note { max-width:230px; margin:18px 0 0; color:#aaa29b; font-size:13px; }
 .footer-links { display:flex; flex-direction:column; gap:8px; font-size:13px; color:#c2bbb5; }
 .footer-links .eyebrow { color:#817a73; margin-bottom:8px; }
+.footer-app-heading { display:flex; align-items:baseline; flex-wrap:wrap; gap:8px; }
+.coming-soon { color:#d8c2ac; font-size:9px; letter-spacing:.12em; white-space:nowrap; }
 .footer-links a { display:flex; align-items:center; gap:4px; }
 .footer-bottom { display:flex; justify-content:space-between; gap:20px; padding-top:20px; border-top:1px solid rgba(255,255,255,.14); color:#817a73; font-size:11px; }
 .page-intro { padding:118px 0 72px; max-width:800px; }
