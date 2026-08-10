@@ -27,7 +27,7 @@ export const products: Product[] = [
     images: ["/images/bridal/aurora-front.jpg"],
     material: "Silk satin, French lace",
     colors: ["Ivory", "Pearl"],
-    sizes: ["XXS", "XS", "S", "M", "L", "XL"],
+    sizes: ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30"],
     featured: true
   },
   {
@@ -41,7 +41,7 @@ export const products: Product[] = [
     images: ["/images/bridal/celeste-front.jpg"],
     material: "Beaded tulle, duchess satin",
     colors: ["Ivory", "Soft white"],
-    sizes: ["XXS", "XS", "S", "M", "L", "XL"],
+    sizes: ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30"],
     featured: true
   },
   {
@@ -55,7 +55,7 @@ export const products: Product[] = [
     images: ["/images/bridal/serena-front.jpg", "/images/bridal/serena-back.jpg"],
     material: "Italian tulle, silk organza",
     colors: ["Ivory", "Warm white"],
-    sizes: ["XXS", "XS", "S", "M", "L", "XL"],
+    sizes: ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30"],
     featured: true
   },
   {
@@ -83,7 +83,7 @@ export const products: Product[] = [
     images: ["/images/bridal/luna-evening.jpg"],
     material: "Embellished satin, crystal beading",
     colors: ["Deep plum", "Amethyst"],
-    sizes: ["XXS", "XS", "S", "M", "L", "XL"]
+    sizes: ["4", "6", "8", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30"]
   },
   {
     id: "bridal-amelie",
