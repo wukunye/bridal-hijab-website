@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "WEINUOKELA",
-  legalName: "Guangzhou Kela Fashion Design Co., Ltd.",
+  legalName: "Guangzhou Kela Clothing Design Co.,Ltd.",
   description: "Timeless bridal and modest fashion for modern women.",
   email: "sales@luveilahjab.com",
   phone: "+86 135 3397 0558",
