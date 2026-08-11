@@ -7,9 +7,6 @@ export const siteConfig = {
   whatsapp: "+86 135 3397 0558",
   wechat: "+86 135 3397 0558",
   address: "Room 404, No. 12 Dekang Road, Tongde Street, Baiyun District, Guangzhou, Guangdong 510407, China",
-  instagram: "https://instagram.com/",
-  facebook: "https://facebook.com/",
-  pinterest: "https://pinterest.com/",
   url: "https://luveilahijab.com"
 } as const;
 

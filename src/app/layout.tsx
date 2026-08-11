@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: { default: `${siteConfig.name} | Bridal & Modest Fashion`, template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
-  openGraph: { title: `${siteConfig.name} | Bridal & Modest Fashion`, description: siteConfig.description, type: "website", siteName: siteConfig.name }
+  openGraph: { title: `${siteConfig.name} | Bridal & Modest Fashion`, description: siteConfig.description, type: "website", siteName: siteConfig.name, url: siteConfig.url, images: ["/images/hero/home-hero.jpg"] }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

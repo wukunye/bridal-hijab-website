@@ -72,7 +72,11 @@ const copy = {
   sendInquiry: { en: "Send an inquiry", zh: "发送询盘", es: "Enviar una consulta", ar: "إرسال استفسار" },
   bridalName: { en: "Bridal", zh: "婚纱", es: "Novias", ar: "فساتين الزفاف" },
   hijabName: { en: "Hijab", zh: "头巾", es: "Hiyab", ar: "الحجاب" },
-  designDevelopmentProduction: { en: "Design + Development + Production", zh: "设计 + 开发 + 生产", es: "Diseno + Desarrollo + Produccion", ar: "التصميم + التطوير + الإنتاج" }
+  designDevelopmentProduction: { en: "Design + Development + Production", zh: "设计 + 开发 + 生产", es: "Diseno + Desarrollo + Produccion", ar: "التصميم + التطوير + الإنتاج" },
+  emailLabel: { en: "Email", zh: "邮箱", es: "Correo electrónico", ar: "البريد الإلكتروني" },
+  whatsappLabel: { en: "WhatsApp", zh: "WhatsApp", es: "WhatsApp", ar: "واتساب" },
+  wechatLabel: { en: "WeChat", zh: "微信", es: "WeChat", ar: "ويتشات" },
+  addressLabel: { en: "Company address", zh: "公司地址", es: "Dirección de la empresa", ar: "عنوان الشركة" }
 } satisfies Record<string, Record<Language, string>>;
 
 export type PageTextId = keyof typeof copy;

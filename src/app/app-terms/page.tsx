@@ -5,7 +5,8 @@ import { LegalLanguageNotice } from "@/components/app/LegalLanguageNotice";
 
 export const metadata: Metadata = {
   title: "Luverila Hijab Designer Terms of Use",
-  description: "Terms of Use for the Luverila Hijab Designer application."
+  description: "Terms of Use for the Luverila Hijab Designer application.",
+  alternates: { canonical: "/app-terms" }
 };
 
 const supportEmail = siteConfig.email;

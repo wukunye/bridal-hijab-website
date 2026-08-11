@@ -11,7 +11,7 @@ export function generateStaticParams() { return products.map((product) => ({ slu
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const product = getProduct(params.slug);
   if (!product) return { title: "Product" };
-  return { title: product.name, description: product.description, openGraph: { title: `${product.name} | ${siteConfig.name}`, description: product.description, images: [product.images[0]] } };
+  return { title: product.name, description: product.description, alternates: { canonical: `/products/${product.slug}` }, openGraph: { title: `${product.name} | ${siteConfig.name}`, description: product.description, url: `${siteConfig.url}/products/${product.slug}`, images: [product.images[0]] } };
 }
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {

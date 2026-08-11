@@ -7,7 +7,8 @@ import { PageText } from "@/components/i18n/PageText";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Discover the design, development and production partner behind bridal, Muslim fashion, evening gowns, hijabs and veils."
+  description: "Discover the design, development and production partner behind bridal, Muslim fashion, evening gowns, hijabs and veils.",
+  alternates: { canonical: "/about" }
 };
 
 export default function AboutPage() {

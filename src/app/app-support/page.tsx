@@ -3,7 +3,8 @@ import { LocalizedAppSupport } from "@/components/app/LocalizedAppSupport";
 
 export const metadata: Metadata = {
   title: "Luverila Hijab Designer Support",
-  description: "Help and support information for Luverila Hijab Designer."
+  description: "Help and support information for Luverila Hijab Designer.",
+  alternates: { canonical: "/app-support" }
 };
 
 export default function AppSupportPage() {

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { siteConfig } from "@/config/site";
 
 type InquiryBody = { fullName?: string; company?: string; country?: string; email?: string; whatsapp?: string; product?: string; message?: string; botcheck?: string };
 
@@ -9,7 +10,7 @@ export async function POST(request: Request) {
   if (!/^\S+@\S+\.\S+$/.test(body.email)) return NextResponse.json({ message: "Please enter a valid email address." }, { status: 400 });
   const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
   if (!accessKey) return NextResponse.json({ message: "The inquiry form is not configured yet. Please email us directly." }, { status: 503 });
-  const payload = { access_key: accessKey, subject: `New inquiry from ${body.fullName}`, from_name: "YOUR BRAND website", ...body };
+  const payload = { access_key: accessKey, subject: `New inquiry from ${body.fullName}`, from_name: `${siteConfig.name} website`, ...body };
   const response = await fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload) });
   if (!response.ok) return NextResponse.json({ message: "The inquiry service is temporarily unavailable." }, { status: 502 });
   const result = await response.json() as { success?: boolean; message?: string };

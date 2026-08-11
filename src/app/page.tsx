@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
@@ -6,6 +7,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getCollectionProducts } from "@/data/products";
 import { editorialImages } from "@/lib/images";
 import { PageText } from "@/components/i18n/PageText";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function HomePage() {
   const bridal = getCollectionProducts("bridal").slice(0, 4);

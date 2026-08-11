@@ -5,7 +5,8 @@ import { LegalLanguageNotice } from "@/components/app/LegalLanguageNotice";
 
 export const metadata: Metadata = {
   title: "Luverila Hijab Designer App Privacy Policy",
-  description: "Privacy policy for the Luverila Hijab Designer application."
+  description: "Privacy policy for the Luverila Hijab Designer application.",
+  alternates: { canonical: "/app-privacy" }
 };
 
 const privacyEmail = siteConfig.email;

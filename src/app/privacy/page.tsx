@@ -3,7 +3,8 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: `How ${siteConfig.name} handles information collected through its website.`
+  description: `How ${siteConfig.name} handles information collected through its website.`,
+  alternates: { canonical: "/privacy" }
 };
 
 export default function PrivacyPage() {
@@ -25,7 +26,7 @@ export default function PrivacyPage() {
     <p>We use contact information to respond to your questions, discuss product inquiries, provide requested information and maintain business communications. We do not sell your personal information.</p>
 
     <h2>Website and service providers</h2>
-    <p>Our website is hosted by Vercel. Like most hosting providers, Vercel may process limited technical information needed to deliver and secure the website, such as IP address, browser details, device information and access logs. Our website also displays images supplied through Unsplash, an external image service. When you view those images, Unsplash may receive technical information from your browser under its own privacy policy.</p>
+    <p>Our website is hosted by Vercel. Like most hosting providers, Vercel may process limited technical information needed to deliver and secure the website, such as IP address, browser details, device information and access logs. Product and editorial images are served as local website assets through our hosting provider.</p>
 
     <h2>External links and messaging services</h2>
     <p>Our website may link to third-party services, including WhatsApp, WeChat and social media platforms. Your use of those services is governed by their own privacy policies. We are not responsible for the privacy practices of external websites or messaging platforms.</p>
@@ -42,6 +43,5 @@ export default function PrivacyPage() {
     <h2>Contact us</h2>
     <p>For questions about this Privacy Policy or your information, contact {siteConfig.legalName} at <a className="underline" href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a> or at {siteConfig.address}.</p>
 
-    <p className="mt-12 text-sm text-muted">TODO: Legal review before production use. This policy is written for the current brochure-style website and should be reviewed before adding checkout, payments, analytics, advertising, customer accounts or email marketing.</p>
   </div>;
 }
