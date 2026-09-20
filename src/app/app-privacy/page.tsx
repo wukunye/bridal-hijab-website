@@ -4,8 +4,8 @@ import { siteConfig } from "@/config/site";
 import { LegalLanguageNotice } from "@/components/app/LegalLanguageNotice";
 
 export const metadata: Metadata = {
-  title: "Luverila Hijab Designer App Privacy Policy",
-  description: "Privacy policy for the Luverila Hijab Designer application.",
+  title: "Luverila Hijab Hub App Privacy Policy",
+  description: "Privacy policy for the Luverila Hijab Hub application.",
   alternates: { canonical: "/app-privacy" }
 };
 
@@ -16,13 +16,13 @@ export default function AppPrivacyPage() {
   return (
     <div className="shell legal-copy app-support">
       <div className="page-intro">
-        <p className="eyebrow">App Legal | Luverila Hijab Designer</p>
+        <p className="eyebrow">App Legal | Luverila Hijab Hub</p>
         <h1>App Privacy Policy</h1>
         <p>Effective date: August 8, 2026<br />Last updated: August 8, 2026</p>
       </div>
       <LegalLanguageNotice />
 
-      <p>This Privacy Policy explains how <strong>{siteConfig.legalName}</strong> (&quot;Luverila,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) handles information when you use the Luverila Hijab Designer application (the &quot;App&quot;) or contact App support.</p>
+      <p>This Privacy Policy explains how <strong>{siteConfig.legalName}</strong> (&quot;Luverila,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) handles information when you use the Luverila Hijab Hub application (the &quot;App&quot;) or contact App support.</p>
       <p>This policy applies to the App. It does not replace the separate privacy policy that may apply to purchases or browsing on the Luverila retail website.</p>
 
       <section aria-labelledby="information-processed">

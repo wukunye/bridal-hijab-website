@@ -29,7 +29,7 @@ const copy: Record<Language, AppCopy> = {
     eyebrow: "A creative studio by WEINUOKELA",
     subtitle: "Design, Visualize, Try On and Share Your Dream Hijab",
     intro: [
-      "Luverila Hijab Designer is a creative design application for hijab designers, fashion creators and anyone who wants to explore personalized hijab styles.",
+      "Luverila Hijab Hub is a creative design application for hijab designers, fashion creators and anyone who wants to explore personalized hijab styles.",
       "Create your own hijab designs with digital drawing tools, colors, fabrics, patterns and decorative details. Transform your sketches into realistic AI-generated visuals, virtually try your designs on an authorized personal photo, and create beautiful images ready to save or share."
     ],
     featuresEyebrow: "Designed for imagination",
@@ -46,7 +46,7 @@ const copy: Record<Language, AppCopy> = {
     availabilityText: "Designed for iPhone and iPad. Apple Pencil support is planned for compatible iPad devices.",
     noteEyebrow: "Please note",
     noteText: "AI-generated and virtual try-on images are visual concepts and may not exactly represent the appearance, fit, color or material of a finished physical product.",
-    operatedBy: "Luverila Hijab Designer is developed and operated by",
+    operatedBy: "Luverila Hijab Hub is developed and operated by",
     supportBefore: "For support, please visit our",
     supportLink: "App Support",
     supportAfter: "page"
@@ -55,7 +55,7 @@ const copy: Record<Language, AppCopy> = {
     eyebrow: "WEINUOKELA 创意工作室",
     subtitle: "设计、想象、试戴并分享你的专属头巾",
     intro: [
-      "Luverila Hijab Designer 是一款面向头巾设计师、时尚创作者以及希望探索个性化头巾风格用户的创意设计应用。",
+      "Luverila Hijab Hub 是一款面向头巾设计师、时尚创作者以及希望探索个性化头巾风格用户的创意设计应用。",
       "使用数字绘图工具、颜色、面料、图案和装饰细节创作自己的头巾设计，将草图转化为 AI 时尚视觉图，在获得授权的人像上进行虚拟试戴，并生成可保存或分享的精美图片。"
     ],
     featuresEyebrow: "为想象力而设计",
@@ -72,7 +72,7 @@ const copy: Record<Language, AppCopy> = {
     availabilityText: "目前面向 iPhone 和 iPad 设计，兼容设备的 Apple Pencil 支持正在规划中。",
     noteEyebrow: "请注意",
     noteText: "AI 生成和虚拟试戴图片仅为视觉概念，可能无法完全代表实体产品的外观、版型、颜色或材质。",
-    operatedBy: "Luverila Hijab Designer 由以下公司开发和运营：",
+    operatedBy: "Luverila Hijab Hub 由以下公司开发和运营：",
     supportBefore: "如需支持，请访问",
     supportLink: "应用支持",
     supportAfter: "页面"
@@ -81,7 +81,7 @@ const copy: Record<Language, AppCopy> = {
     eyebrow: "Un estudio creativo de WEINUOKELA",
     subtitle: "Disena, visualiza, pruebate y comparte tu hiyab ideal",
     intro: [
-      "Luverila Hijab Designer es una aplicacion creativa para disenadores de hiyabs, creadores de moda y cualquier persona que quiera explorar estilos de hiyab personalizados.",
+      "Luverila Hijab Hub es una aplicacion creativa para disenadores de hiyabs, creadores de moda y cualquier persona que quiera explorar estilos de hiyab personalizados.",
       "Crea tus propios disenos de hiyab con herramientas de dibujo digital, colores, tejidos, patrones y detalles decorativos. Convierte tus bocetos en imagenes realistas generadas por IA, prueba virtualmente tus disenos en una foto personal autorizada y crea imagenes listas para guardar o compartir."
     ],
     featuresEyebrow: "Disenado para imaginar",
@@ -98,7 +98,7 @@ const copy: Record<Language, AppCopy> = {
     availabilityText: "Disenada para iPhone y iPad. El soporte para Apple Pencil esta previsto para modelos de iPad compatibles.",
     noteEyebrow: "Ten en cuenta",
     noteText: "Las imagenes generadas por IA y de prueba virtual son conceptos visuales y pueden no representar exactamente el aspecto, ajuste, color o material de un producto fisico terminado.",
-    operatedBy: "Luverila Hijab Designer esta desarrollada y operada por",
+    operatedBy: "Luverila Hijab Hub esta desarrollada y operada por",
     supportBefore: "Para obtener ayuda, visita nuestra pagina de",
     supportLink: "Soporte de la app",
     supportAfter: ""
@@ -107,7 +107,7 @@ const copy: Record<Language, AppCopy> = {
     eyebrow: "استوديو إبداعي من WEINUOKELA",
     subtitle: "صممي وتخيلي وجربي وشاركي حجاب أحلامك",
     intro: [
-      "Luverila Hijab Designer هو تطبيق تصميم إبداعي لمصممي الحجاب ومبدعي الأزياء ولكل من ترغب في استكشاف أنماط الحجاب الشخصية.",
+      "Luverila Hijab Hub هو تطبيق تصميم إبداعي لمصممي الحجاب ومبدعي الأزياء ولكل من ترغب في استكشاف أنماط الحجاب الشخصية.",
       "صممي حجابك باستخدام أدوات الرسم الرقمية والألوان والأقمشة والنقوش والتفاصيل الزخرفية. حوّلي رسوماتك إلى صور أزياء واقعية بالذكاء الاصطناعي، وجربي تصميماتك افتراضيا على صورة شخصية مصرح بها، وأنشئي صورا جميلة جاهزة للحفظ أو المشاركة."
     ],
     featuresEyebrow: "مصمم للخيال",
@@ -124,7 +124,7 @@ const copy: Record<Language, AppCopy> = {
     availabilityText: "صمم التطبيق لأجهزة iPhone وiPad. من المخطط دعم Apple Pencil لأجهزة iPad المتوافقة.",
     noteEyebrow: "يرجى الملاحظة",
     noteText: "الصور الناتجة بالذكاء الاصطناعي وصور التجربة الافتراضية هي تصورات بصرية وقد لا تمثل بدقة المظهر أو المقاس أو اللون أو خامة المنتج الفعلي.",
-    operatedBy: "تم تطوير وتشغيل Luverila Hijab Designer بواسطة",
+    operatedBy: "تم تطوير وتشغيل Luverila Hijab Hub بواسطة",
     supportBefore: "للحصول على الدعم، يرجى زيارة صفحة",
     supportLink: "دعم التطبيق",
     supportAfter: ""
@@ -143,11 +143,11 @@ export function LocalizedAppDesigner() {
         <div className="shell app-hero-inner">
           <div className="app-hero-copy">
             <p className="eyebrow">{text.eyebrow}</p>
-            <h1>Luverila Hijab Designer</h1>
+            <h1>Luverila Hijab Hub</h1>
             <p className="app-hero-subtitle">{text.subtitle}</p>
             {text.intro.map((paragraph) => <p className="app-hero-intro" key={paragraph}>{paragraph}</p>)}
           </div>
-          <div className="app-hero-mark" aria-hidden="true"><span>LD</span><small>LUVERILA<br />HIJAB DESIGNER</small></div>
+          <div className="app-hero-mark" aria-hidden="true"><span>LH</span><small>LUVERILA<br />HIJAB HUB</small></div>
         </div>
       </section>
       <section className="section section-cream app-features" aria-labelledby="app-features-title">

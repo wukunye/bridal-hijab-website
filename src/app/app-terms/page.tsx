@@ -4,8 +4,8 @@ import { siteConfig } from "@/config/site";
 import { LegalLanguageNotice } from "@/components/app/LegalLanguageNotice";
 
 export const metadata: Metadata = {
-  title: "Luverila Hijab Designer Terms of Use",
-  description: "Terms of Use for the Luverila Hijab Designer application.",
+  title: "Luverila Hijab Hub Terms of Use",
+  description: "Terms of Use for the Luverila Hijab Hub application.",
   alternates: { canonical: "/app-terms" }
 };
 
@@ -15,13 +15,13 @@ export default function AppTermsPage() {
   return (
     <div className="shell legal-copy app-support">
       <div className="page-intro">
-        <p className="eyebrow">App Legal | Luverila Hijab Designer</p>
+        <p className="eyebrow">App Legal | Luverila Hijab Hub</p>
         <h1>Terms of Use</h1>
         <p>Effective date: August 8, 2026<br />Last updated: August 8, 2026</p>
       </div>
       <LegalLanguageNotice />
 
-      <p>These Terms of Use (&quot;Terms&quot;) govern your use of the Luverila Hijab Designer application (the &quot;App&quot;), operated by <strong>{siteConfig.legalName}</strong> (&quot;Luverila,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By downloading, accessing, or using the App, you agree to these Terms.</p>
+      <p>These Terms of Use (&quot;Terms&quot;) govern your use of the Luverila Hijab Hub application (the &quot;App&quot;), operated by <strong>{siteConfig.legalName}</strong> (&quot;Luverila,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By downloading, accessing, or using the App, you agree to these Terms.</p>
       <p>If you do not agree, do not use the App.</p>
 
       <section aria-labelledby="app">
